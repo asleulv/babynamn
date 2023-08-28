@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add these links to templates/index.html and templates/result.html -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inconsolata&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inconsolata&family=Creepster&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inconsolata&family=Creepster&family=Bungee+Shade&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Abril+Fatface&family=Inconsolata&family=Creepster&family=Bungee+Shade&display=swap">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Namnetestar</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Namnetestar</h1>
+        <ul class="list-group mt-3">
+            {% for text in generated_texts %}
+                <li class="list-group-item">{{ text | safe }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
